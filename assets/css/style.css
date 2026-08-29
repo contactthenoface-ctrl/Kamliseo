@@ -2,7 +2,7 @@
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
-  --primary: #6C2BD9;
+  --primary: #2ecc71;
   --primary-dark: #4A1B99;
   --primary-light: #8B5CF6;
   --accent: #F59E0B;
