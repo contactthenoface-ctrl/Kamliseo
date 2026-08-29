@@ -8,33 +8,1476 @@
 
   <meta
     name="description"
-    content="Le blog Kamliseo : conseils SEO, création de sites web au Maroc, e-commerce et stratégie digitale. Guides pratiques pour booster votre visibilité en ligne."
+    content="Le blog Kamliseo : conseils SEO, création de sites web au Maroc, e-commerce et stratégie digitale. Guides pratiques pour développer votre visibilité en ligne."
   >
 
   <meta name="robots" content="index, follow">
-
   <link rel="canonical" href="https://kamliseo.com/blog/">
 
+  <!-- Open Graph -->
   <meta property="og:title" content="Blog SEO & Création de sites web au Maroc | Kamliseo">
   <meta
     property="og:description"
-    content="Conseils SEO, création de sites web, e-commerce et stratégie digitale pour développer votre visibilité en ligne au Maroc."
+    content="Conseils SEO, création de sites web, e-commerce et stratégie digitale pour développer votre présence en ligne."
   >
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://kamliseo.com/blog/">
   <meta property="og:locale" content="fr_MA">
 
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
     rel="stylesheet"
   >
 
+  <!-- Main CSS -->
   <link rel="stylesheet" href="/assets/css/style.css">
 
+  <!-- =====================================================
+       BLOG PAGE STYLES
+       ===================================================== -->
+
   <style>
+
+    /* =====================================================
+       HEADER
+       ===================================================== */
+
+    .blog-page-header {
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(255,255,255,0.98) 0%,
+          rgba(255,255,255,0.94) 48%,
+          rgba(255,255,255,0.68) 100%
+        ),
+        url("https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1800&q=85")
+        center / cover no-repeat;
+      padding: 75px 0 65px;
+      border-bottom: 1px solid #e8ece9;
+    }
+
+    .blog-page-header h1 {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(2.5rem, 5vw, 4.2rem);
+      line-height: 1.1;
+      margin: 0 0 18px;
+      color: #111;
+      font-weight: 800;
+      max-width: 750px;
+    }
+
+    .blog-page-header p {
+      max-width: 720px;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #5e6862;
+      margin: 0 0 25px;
+    }
+
+    .blog-breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: .9rem;
+      color: #6b746f;
+    }
+
+    .blog-breadcrumb a {
+      color: #148c45;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .blog-breadcrumb span {
+      color: #a5aaa7;
+    }
+
+
+    /* =====================================================
+       CATEGORY FILTER
+       ===================================================== */
+
+    .blog-category-bar {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 42px;
+    }
+
+    .blog-cat {
+      padding: 10px 21px;
+      border-radius: 50px;
+      font-size: .86rem;
+      font-weight: 600;
+      background: #fff;
+      color: #4e5752;
+      border: 1px solid #dfe5e1;
+      transition: all .25s ease;
+      cursor: pointer;
+    }
+
+    .blog-cat:hover,
+    .blog-cat.active {
+      background: #118944;
+      color: #fff;
+      border-color: #118944;
+      transform: translateY(-1px);
+    }
+
+
+    /* =====================================================
+       FEATURED SECTION
+       ===================================================== */
+
+    .blog-featured {
+      display: grid;
+      grid-template-columns: 1.45fr 1fr;
+      gap: 28px;
+      margin-bottom: 48px;
+    }
+
+    .blog-featured-card {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      border-radius: 18px;
+      background: #fff;
+      border: 1px solid #e1e6e3;
+      text-decoration: none;
+      color: inherit;
+      transition: all .3s ease;
+    }
+
+    .blog-featured-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 18px 45px rgba(20, 50, 35, .11);
+    }
+
+    .blog-featured-image {
+      height: 310px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .blog-featured-image img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      transition: transform .5s ease;
+    }
+
+    .blog-featured-card:hover .blog-featured-image img {
+      transform: scale(1.04);
+    }
+
+    .blog-image-overlay {
+      position: absolute;
+      left: 16px;
+      bottom: 16px;
+      background: #118944;
+      color: #fff;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: .8rem;
+      font-weight: 700;
+    }
+
+    .blog-featured-body {
+      padding: 30px;
+    }
+
+    .blog-tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 11px;
+      border-radius: 6px;
+      background: #eaf7ef;
+      color: #118944;
+      font-size: .75rem;
+      font-weight: 700;
+      margin-bottom: 13px;
+    }
+
+    .blog-featured-body h2 {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 1.7rem;
+      line-height: 1.3;
+      margin: 0 0 13px;
+      color: #111;
+    }
+
+    .blog-featured-body p {
+      color: #68716c;
+      line-height: 1.7;
+      margin: 0 0 20px;
+    }
+
+
+    /* =====================================================
+       BLOG META
+       ===================================================== */
+
+    .blog-meta {
+      display: flex;
+      gap: 17px;
+      flex-wrap: wrap;
+      color: #7a827e;
+      font-size: .8rem;
+    }
+
+    .blog-meta span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .meta-icon {
+      width: 15px;
+      height: 15px;
+      color: #118944;
+      flex-shrink: 0;
+    }
+
+
+    /* =====================================================
+       SIDE ARTICLES
+       ===================================================== */
+
+    .blog-featured-side {
+      display: flex;
+      flex-direction: column;
+      gap: 17px;
+    }
+
+    .blog-mini-card {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      background: #fff;
+      border: 1px solid #e1e6e3;
+      border-radius: 14px;
+      padding: 13px;
+      text-decoration: none;
+      color: inherit;
+      transition: all .25s ease;
+    }
+
+    .blog-mini-card:hover {
+      transform: translateX(4px);
+      box-shadow: 0 10px 30px rgba(20, 50, 35, .09);
+    }
+
+    .blog-mini-image {
+      width: 110px;
+      height: 82px;
+      border-radius: 10px;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .blog-mini-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .blog-mini-content {
+      min-width: 0;
+    }
+
+    .blog-mini-card h3 {
+      font-size: .95rem;
+      line-height: 1.4;
+      margin: 0 0 8px;
+      color: #161918;
+    }
+
+
+    /* =====================================================
+       ARTICLE GRID
+       ===================================================== */
+
+    .blog-card {
+      overflow: hidden;
+      background: #fff;
+      border: 1px solid #e1e6e3;
+      border-radius: 15px;
+      transition: all .3s ease;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(20, 50, 35, .1);
+    }
+
+    .blog-card a {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .blog-card-image {
+      position: relative;
+      height: 205px;
+      overflow: hidden;
+    }
+
+    .blog-card-image img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      transition: transform .5s ease;
+    }
+
+    .blog-card:hover .blog-card-image img {
+      transform: scale(1.05);
+    }
+
+    .blog-card-image .blog-image-overlay {
+      bottom: 12px;
+      left: 12px;
+      padding: 6px 10px;
+      font-size: .72rem;
+    }
+
+    .blog-card-body {
+      padding: 20px;
+    }
+
+    .blog-card-body h3 {
+      font-size: 1.05rem;
+      line-height: 1.45;
+      margin: 0 0 10px;
+      color: #141615;
+    }
+
+    .blog-card-body p {
+      font-size: .88rem;
+      line-height: 1.65;
+      color: #727a76;
+      margin: 0 0 15px;
+    }
+
+
+    /* =====================================================
+       NEWSLETTER
+       ===================================================== */
+
+    .blog-newsletter {
+      background: linear-gradient(135deg, #edf9f2, #f7fbf8);
+      border: 1px solid #dcece1;
+      border-radius: 18px;
+      padding: 35px 40px;
+    }
+
+    .newsletter-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .newsletter-icon {
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: #118944;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .newsletter-icon svg {
+      width: 27px;
+      height: 27px;
+    }
+
+    .newsletter-text {
+      flex: 1;
+    }
+
+    .newsletter-text h2 {
+      margin: 0 0 5px;
+      font-size: 1.35rem;
+      color: #111;
+    }
+
+    .newsletter-text p {
+      margin: 0;
+      color: #68716c;
+      font-size: .9rem;
+    }
+
+    .newsletter-form {
+      display: flex;
+      gap: 10px;
+      width: min(480px, 100%);
+    }
+
+    .newsletter-form input {
+      min-width: 0;
+      flex: 1;
+      border: 1px solid #d9e2dc;
+      border-radius: 8px;
+      padding: 13px 15px;
+      font-family: inherit;
+      outline: none;
+      background: #fff;
+    }
+
+    .newsletter-form input:focus {
+      border-color: #118944;
+      box-shadow: 0 0 0 3px rgba(17,137,68,.1);
+    }
+
+
+    /* =====================================================
+       PAGINATION
+       ===================================================== */
+
+    .blog-pagination {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      margin-top: 48px;
+    }
+
+    .blog-pagination button {
+      min-width: 42px;
+      height: 42px;
+      border-radius: 8px;
+      border: 1px solid #dfe5e1;
+      background: #fff;
+      color: #39413d;
+      font-family: inherit;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all .2s ease;
+    }
+
+    .blog-pagination button:hover:not(:disabled) {
+      border-color: #118944;
+      color: #118944;
+    }
+
+    .blog-pagination button.active {
+      background: #118944;
+      color: #fff;
+      border-color: #118944;
+    }
+
+    .blog-pagination button:disabled {
+      opacity: .45;
+      cursor: not-allowed;
+    }
+
+
+    /* =====================================================
+       RESPONSIVE
+       ===================================================== */
+
+    @media (max-width: 900px) {
+
+      .blog-featured {
+        grid-template-columns: 1fr;
+      }
+
+      .newsletter-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .newsletter-form {
+        width: 100%;
+      }
+
+    }
+
+    @media (max-width: 768px) {
+
+      .blog-page-header {
+        padding: 55px 0 45px;
+        background-position: center;
+      }
+
+      .blog-page-header h1 {
+        font-size: 2.45rem;
+      }
+
+      .blog-page-header p {
+        font-size: 1rem;
+      }
+
+      .blog-featured-image {
+        height: 220px;
+      }
+
+      .blog-featured-body {
+        padding: 23px;
+      }
+
+      .blog-featured-body h2 {
+        font-size: 1.4rem;
+      }
+
+      .blog-mini-image {
+        width: 95px;
+        height: 75px;
+      }
+
+      .blog-card-image {
+        height: 210px;
+      }
+
+      .blog-newsletter {
+        padding: 28px 20px;
+      }
+
+      .newsletter-form {
+        flex-direction: column;
+      }
+
+      .newsletter-form .btn {
+        width: 100%;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+  <!-- =====================================================
+       NAVIGATION
+       ===================================================== -->
+
+  <nav class="navbar">
+
+    <div class="container nav-wrapper">
+
+      <a
+        href="/"
+        class="nav-logo"
+        aria-label="Kamliseo - Accueil"
+      >
+        <img
+          src="/assets/img/logo kamliseo.png"
+          alt="Kamliseo"
+        >
+      </a>
+
+      <ul class="nav-menu">
+
+        <li>
+          <a href="/" class="nav-link">
+            Accueil
+          </a>
+        </li>
+
+        <li>
+          <a href="/services/" class="nav-link">
+            Services
+          </a>
+        </li>
+
+        <li>
+          <a href="/tarifs/" class="nav-link">
+            Tarifs
+          </a>
+        </li>
+
+        <li>
+          <a href="/blog/" class="nav-link active">
+            Blog
+          </a>
+        </li>
+
+        <li>
+          <a href="/contact/" class="nav-link">
+            Contact
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="/contact/"
+            class="btn btn-primary nav-cta"
+          >
+            Devis gratuit
+          </a>
+        </li>
+
+      </ul>
+
+      <button
+        class="hamburger"
+        type="button"
+        aria-label="Ouvrir le menu"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+
+  </nav>
+
+
+  <!-- =====================================================
+       BLOG HEADER
+       ===================================================== -->
+
+  <header class="blog-page-header">
+
+    <div class="container">
+
+      <h1>
+        Blog Kamliseo
+      </h1>
+
+      <p>
+        Conseils SEO, création de sites web au Maroc,
+        e-commerce et stratégie digitale pour développer
+        votre présence en ligne.
+      </p>
+
+      <div class="blog-breadcrumb">
+
+        <a href="/">
+          Accueil
+        </a>
+
+        <span>/</span>
+
+        <span>
+          Blog
+        </span>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <main>
+
+    <!-- =====================================================
+         BLOG ARTICLES
+         ===================================================== -->
+
+    <section class="section">
+
+      <div class="container">
+
+        <!-- CATEGORIES -->
+
+        <div class="blog-category-bar">
+
+          <span class="blog-cat active">
+            Tous
+          </span>
+
+          <span class="blog-cat">
+            Création de site
+          </span>
+
+          <span class="blog-cat">
+            SEO
+          </span>
+
+          <span class="blog-cat">
+            E-commerce
+          </span>
+
+          <span class="blog-cat">
+            WordPress
+          </span>
+
+          <span class="blog-cat">
+            Stratégie digitale
+          </span>
+
+        </div>
+
+
+        <!-- =================================================
+             FEATURED
+             ================================================= -->
+
+        <div class="blog-featured">
+
+          <!-- ARTICLE PRINCIPAL -->
+
+          <a
+            href="/blog/pourquoi-confier-creation-site-web-agence-maroc/"
+            class="blog-featured-card"
+          >
+
+            <div class="blog-featured-image">
+
+              <img
+                src="https://images.unsplash.com/photo-1531379410502-63bfe8cdaf0f?auto=format&fit=crop&w=1200&q=85"
+                alt="Création de site web professionnel au Maroc"
+                loading="eager"
+              >
+
+              <span class="blog-image-overlay">
+                Création de site
+              </span>
+
+            </div>
+
+            <div class="blog-featured-body">
+
+              <span class="blog-tag">
+                Création de site
+              </span>
+
+              <h2>
+                Pourquoi confier la création de son site web à une agence au Maroc ?
+              </h2>
+
+              <p>
+                Faut-il créer son site soi-même ou faire appel à une agence
+                web au Maroc ? Découvrez les avantages concrets d'un
+                accompagnement professionnel pour votre présence en ligne.
+              </p>
+
+              <div class="blog-meta">
+
+                <span>
+
+                  <svg class="meta-icon" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="4" width="18" height="18" rx="2"/>
+                    <line x1="16" y1="2" x2="16" y2="6"/>
+                    <line x1="8" y1="2" x2="8" y2="6"/>
+                    <line x1="3" y1="10" x2="21" y2="10"/>
+                  </svg>
+
+                  28 août 2026
+
+                </span>
+
+                <span>
+
+                  <svg class="meta-icon" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="9"/>
+                    <polyline points="12 7 12 12 15 14"/>
+                  </svg>
+
+                  9 min de lecture
+
+                </span>
+
+              </div>
+
+            </div>
+
+          </a>
+
+
+          <!-- ARTICLES SECONDAIRES -->
+
+          <div class="blog-featured-side">
+
+
+            <a
+              href="/blog/core-web-vitals-2026-guide-complet/"
+              class="blog-mini-card"
+            >
+
+              <div class="blog-mini-image">
+
+                <img
+                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=500&q=80"
+                  alt="Core Web Vitals et performance web"
+                  loading="lazy"
+                >
+
+              </div>
+
+              <div class="blog-mini-content">
+
+                <h3>
+                  Core Web Vitals en 2026 : le guide complet
+                </h3>
+
+                <div class="blog-meta">
+
+                  <span>22 août 2026</span>
+                  <span>8 min</span>
+
+                </div>
+
+              </div>
+
+            </a>
+
+
+            <a
+              href="/blog/trouver-mots-cles-seo-maroc/"
+              class="blog-mini-card"
+            >
+
+              <div class="blog-mini-image">
+
+                <img
+                  src="https://images.unsplash.com/photo-1456324504439-367cee3b3c32?auto=format&fit=crop&w=500&q=80"
+                  alt="Recherche de mots clés SEO"
+                  loading="lazy"
+                >
+
+              </div>
+
+              <div class="blog-mini-content">
+
+                <h3>
+                  Comment trouver les meilleurs mots-clés SEO au Maroc
+                </h3>
+
+                <div class="blog-meta">
+
+                  <span>18 août 2026</span>
+                  <span>6 min</span>
+
+                </div>
+
+              </div>
+
+            </a>
+
+
+            <a
+              href="/blog/netlinking-qualite-vs-quantite-2026/"
+              class="blog-mini-card"
+            >
+
+              <div class="blog-mini-image">
+
+                <img
+                  src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?auto=format&fit=crop&w=500&q=80"
+                  alt="Netlinking et stratégie SEO"
+                  loading="lazy"
+                >
+
+              </div>
+
+              <div class="blog-mini-content">
+
+                <h3>
+                  Netlinking : qualité vs quantité en 2026
+                </h3>
+
+                <div class="blog-meta">
+
+                  <span>14 août 2026</span>
+                  <span>7 min</span>
+
+                </div>
+
+              </div>
+
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- =================================================
+             ARTICLE GRID
+             ================================================= -->
+
+        <div class="grid grid-3">
+
+
+          <!-- ARTICLE 1 -->
+
+          <article class="blog-card">
+
+            <a href="/blog/rediger-article-seo-7-etapes/">
+
+              <div class="blog-card-image">
+
+                <img
+                  src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=900&q=80"
+                  alt="Rédiger un article SEO"
+                  loading="lazy"
+                >
+
+                <span class="blog-image-overlay">
+                  Content
+                </span>
+
+              </div>
+
+              <div class="blog-card-body">
+
+                <span class="blog-tag">
+                  Content
+                </span>
+
+                <h3>
+                  Rédiger un article SEO en 7 étapes
+                </h3>
+
+                <p>
+                  De la recherche de mots-clés à la publication,
+                  le processus complet pour créer du contenu
+                  qui se positionne sur Google.
+                </p>
+
+                <div class="blog-meta">
+                  <span>10 août 2026</span>
+                  <span>10 min</span>
+                </div>
+
+              </div>
+
+            </a>
+
+          </article>
+
+
+          <!-- ARTICLE 2 -->
+
+          <article class="blog-card">
+
+            <a href="/blog/optimiser-google-business-profile-maroc/">
+
+              <div class="blog-card-image">
+
+                <img
+                  src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=900&q=80"
+                  alt="Google Business Profile et référencement local"
+                  loading="lazy"
+                >
+
+                <span class="blog-image-overlay">
+                  SEO Local
+                </span>
+
+              </div>
+
+              <div class="blog-card-body">
+
+                <span class="blog-tag">
+                  SEO Local
+                </span>
+
+                <h3>
+                  Optimiser sa fiche Google Business Profile au Maroc
+                </h3>
+
+                <p>
+                  10 actions concrètes pour améliorer votre visibilité
+                  locale et attirer davantage de clients près de chez vous.
+                </p>
+
+                <div class="blog-meta">
+                  <span>5 août 2026</span>
+                  <span>5 min</span>
+                </div>
+
+              </div>
+
+            </a>
+
+          </article>
+
+
+          <!-- ARTICLE 3 -->
+
+          <article class="blog-card">
+
+            <a href="/blog/seo-et-intelligence-artificielle-2026/">
+
+              <div class="blog-card-image">
+
+                <img
+                  src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=900&q=80"
+                  alt="Intelligence artificielle et SEO"
+                  loading="lazy"
+                >
+
+                <span class="blog-image-overlay">
+                  IA & SEO
+                </span>
+
+              </div>
+
+              <div class="blog-card-body">
+
+                <span class="blog-tag">
+                  IA & SEO
+                </span>
+
+                <h3>
+                  SEO et Intelligence Artificielle : ami ou ennemi ?
+                </h3>
+
+                <p>
+                  Comment l'IA transforme le SEO en 2026 et comment
+                  adapter votre stratégie pour rester visible.
+                </p>
+
+                <div class="blog-meta">
+                  <span>1 août 2026</span>
+                  <span>9 min</span>
+                </div>
+
+              </div>
+
+            </a>
+
+          </article>
+
+
+          <!-- ARTICLE 4 -->
+
+          <article class="blog-card">
+
+            <a href="/blog/woocommerce-vs-shopify-maroc/">
+
+              <div class="blog-card-image">
+
+                <img
+                  src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=900&q=80"
+                  alt="E-commerce WooCommerce et Shopify"
+                  loading="lazy"
+                >
+
+                <span class="blog-image-overlay">
+                  E-commerce
+                </span>
+
+              </div>
+
+              <div class="blog-card-body">
+
+                <span class="blog-tag">
+                  E-commerce
+                </span>
+
+                <h3>
+                  WooCommerce vs Shopify : lequel choisir au Maroc ?
+                </h3>
+
+                <p>
+                  Comparatif des deux plateformes e-commerce
+                  les plus populaires pour le marché marocain.
+                </p>
+
+                <div class="blog-meta">
+                  <span>25 juil 2026</span>
+                  <span>8 min</span>
+                </div>
+
+              </div>
+
+            </a>
+
+          </article>
+
+
+          <!-- ARTICLE 5 -->
+
+          <article class="blog-card">
+
+            <a href="/blog/site-web-responsive-maroc/">
+
+              <div class="blog-card-image">
+
+                <img
+                  src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=900&q=80"
+                  alt="Site web responsive sur ordinateur et mobile"
+                  loading="lazy"
+                >
+
+                <span class="blog-image-overlay">
+                  Création de site
+                </span>
+
+              </div>
+
+              <div class="blog-card-body">
+
+                <span class="blog-tag">
+                  Création de site
+                </span>
+
+                <h3>
+                  Pourquoi un site responsive est indispensable au Maroc
+                </h3>
+
+                <p>
+                  Pourquoi l'adaptation mobile-first est devenue
+                  indispensable pour les entreprises marocaines.
+                </p>
+
+                <div class="blog-meta">
+                  <span>20 juil 2026</span>
+                  <span>6 min</span>
+                </div>
+
+              </div>
+
+            </a>
+
+          </article>
+
+
+          <!-- ARTICLE 6 -->
+
+          <article class="blog-card">
+
+            <a href="/blog/prix-creation-site-web-maroc/">
+
+              <div class="blog-card-image">
+
+                <img
+                  src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=900&q=80"
+                  alt="Budget et prix de création de site web"
+                  loading="lazy"
+                >
+
+                <span class="blog-image-overlay">
+                  Tarifs
+                </span>
+
+              </div>
+
+              <div class="blog-card-body">
+
+                <span class="blog-tag">
+                  Tarifs
+                </span>
+
+                <h3>
+                  Combien coûte la création d'un site web au Maroc ?
+                </h3>
+
+                <p>
+                  Tarifs, facteurs de prix et conseils pour
+                  budgétiser votre projet web au Maroc en 2026.
+                </p>
+
+                <div class="blog-meta">
+                  <span>15 juil 2026</span>
+                  <span>7 min</span>
+                </div>
+
+              </div>
+
+            </a>
+
+          </article>
+
+        </div>
+
+
+        <!-- =================================================
+             PAGINATION
+             ================================================= -->
+
+        <div class="blog-pagination">
+
+          <button type="button" disabled>
+            ←
+          </button>
+
+          <button
+            type="button"
+            class="active"
+          >
+            1
+          </button>
+
+          <button type="button">
+            2
+          </button>
+
+          <button type="button">
+            3
+          </button>
+
+          <button type="button">
+            →
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         NEWSLETTER
+         ===================================================== -->
+
+    <section
+      class="section section-gray"
+      style="padding-top:0"
+    >
+
+      <div class="container">
+
+        <div class="blog-newsletter">
+
+          <div class="newsletter-inner">
+
+            <div class="newsletter-icon">
+
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+              >
+                <rect
+                  x="3"
+                  y="5"
+                  width="18"
+                  height="14"
+                  rx="2"
+                />
+
+                <polyline points="3,7 12,13 21,7" />
+
+              </svg>
+
+            </div>
+
+
+            <div class="newsletter-text">
+
+              <h2>
+                Recevez nos meilleurs articles
+              </h2>
+
+              <p>
+                Un email par mois, zéro spam, uniquement
+                du contenu à forte valeur ajoutée.
+              </p>
+
+            </div>
+
+
+            <form
+              class="newsletter-form"
+              onsubmit="event.preventDefault(); subscribeNewsletter(this);"
+            >
+
+              <input
+                type="email"
+                placeholder="votre@email.com"
+                aria-label="Votre adresse email"
+                required
+              >
+
+              <button
+                type="submit"
+                class="btn btn-primary"
+              >
+                S'abonner
+              </button>
+
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+
+  <footer class="footer">
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+
+        <div class="footer-brand">
+
+          <h3>
+            Kamli<span>SEO</span>
+          </h3>
+
+          <p>
+            Agence web basée à Casablanca.
+            Création de sites web, e-commerce,
+            applications web et référencement SEO
+            pour les entreprises marocaines.
+          </p>
+
+        </div>
+
+
+        <div class="footer-col">
+
+          <h4>
+            Navigation
+          </h4>
+
+          <a href="/">
+            Accueil
+          </a>
+
+          <a href="/services/">
+            Services
+          </a>
+
+          <a href="/tarifs/">
+            Tarifs
+          </a>
+
+          <a href="/blog/">
+            Blog
+          </a>
+
+          <a href="/contact/">
+            Contact
+          </a>
+
+        </div>
+
+
+        <div class="footer-col">
+
+          <h4>
+            Services
+          </h4>
+
+          <a href="/services/">
+            Création de sites web
+          </a>
+
+          <a href="/services/">
+            Sites e-commerce
+          </a>
+
+          <a href="/services/">
+            Applications web
+          </a>
+
+          <a href="/services/">
+            Référencement SEO
+          </a>
+
+        </div>
+
+
+        <div class="footer-col">
+
+          <h4>
+            Contact
+          </h4>
+
+          <a href="mailto:contact@kamliseo.com">
+            contact@kamliseo.com
+          </a>
+
+          <a href="tel:+212673492502">
+            06 73 49 25 02
+          </a>
+
+          <a href="/contact/">
+            Devis gratuit
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        © 2026 Kamliseo — Agence web basée à Casablanca, Maroc.
+        Tous droits réservés.
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+       ===================================================== -->
+
+  <script src="/assets/js/main.js"></script>
+
+  <script>
+
+    function subscribeNewsletter(form) {
+
+      const button = form.querySelector("button");
+      const originalText = button.textContent;
+
+      button.textContent = "✓ Inscrit !";
+      button.disabled = true;
+
+      setTimeout(function () {
+        button.textContent = originalText;
+        button.disabled = false;
+      }, 3000);
+
+    }
+
+
+    /* Catégories visuelles */
+
+    document.querySelectorAll(".blog-cat").forEach(function(category) {
+
+      category.addEventListener("click", function() {
+
+        document
+          .querySelectorAll(".blog-cat")
+          .forEach(function(item) {
+            item.classList.remove("active");
+          });
+
+        this.classList.add("active");
+
+      });
+
+    });
+
+  </script>
+
+</body>
+                  </html>  <style>
 
     /* =====================================================
        BLOG
