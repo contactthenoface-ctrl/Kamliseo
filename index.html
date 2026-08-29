@@ -4,109 +4,146 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kamliseo — Agence SEO & Marketing Digital</title>
-  <meta name="description" content="Kamliseo booste votre visibilité en ligne : SEO technique, création de sites, content marketing et stratégie digitale sur mesure.">
+  <meta name="description" content="Kamliseo crée votre site web et optimise votre présence sur Google pour que vos futurs clients vous trouvent avant vos concurrents.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/style.css">
+  
+  <!-- Ajout des styles spécifiques pour correspondre à votre charte graphique -->
+  <style>
+    :root {
+      --vert-fonce: #0b3b2c;
+      --vert-vif: #10b981;
+      --vert-pastel: #e6f4ea;
+    }
+    
+    /* Ajustements de la typographie et des couleurs */
+    .text-vert-vif { color: var(--vert-vif); }
+    .bg-vert-fonce { background-color: var(--vert-fonce); color: white; border: none; }
+    .bg-vert-fonce:hover { background-color: #07271d; }
+    
+    /* Badge Hero */
+    .badge-seo {
+      display: inline-block;
+      background-color: var(--vert-pastel);
+      color: var(--vert-fonce);
+      font-weight: 600;
+      font-size: 0.85rem;
+      padding: 6px 14px;
+      border-radius: 50px;
+      margin-bottom: 20px;
+      letter-spacing: 0.5px;
+    }
+    .badge-seo span { color: var(--vert-vif); margin-right: 5px; }
+
+    /* Titre Hero */
+    .hero h1 { font-size: 3rem; line-height: 1.1; margin-bottom: 20px; color: #111; }
+    .hero p { font-size: 1.1rem; color: #555; margin-bottom: 30px; max-width: 600px; }
+    
+    /* Boutons et réassurance */
+    .hero-buttons { display: flex; gap: 15px; margin-bottom: 20px; flex-wrap: wrap; }
+    .btn-outline-custom { background: transparent; border: 1px solid #ddd; color: #111; }
+    .reassurance-list { display: flex; gap: 15px; font-size: 0.85rem; color: #666; flex-wrap: wrap; }
+    
+    /* Cartes Services */
+    .service-card { border: 1px solid #eee; border-radius: 16px; padding: 25px; box-shadow: 0 4px 12px rgba(0,0,0,0.03); }
+    .icon-wrapper {
+      background-color: var(--vert-pastel);
+      width: 48px; height: 48px;
+      display: flex; align-items: center; justify-content: center;
+      border-radius: 12px;
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+    
+    /* Bouton WhatsApp flottant */
+    .whatsapp-float {
+      position: fixed; bottom: 20px; right: 20px;
+      background-color: #25d366; width: 60px; height: 60px;
+      border-radius: 50px; display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3); z-index: 100;
+    }
+    .whatsapp-float img { width: 35px; height: 35px; }
+  </style>
 </head>
 <body>
   <nav class="navbar">
-    <div class="container nav-wrapper">
-      <!-- Intégration du logo ici -->
-      <a href="/" class="nav-logo">
-        <img src="/assets/img/logo kamliseo.png" alt="Logo Kamliseo" height="40">
-        Kamli<span>SEO</span>
+    <div class="container nav-wrapper" style="display: flex; justify-content: space-between; align-items: center; padding: 15px 0;">
+      
+      <!-- LOGO : Taille ajustée (~28px de hauteur) -->
+      <a href="/" class="nav-logo" style="display: flex; align-items: center; font-weight: 800; font-size: 1.4rem; color: #111; text-decoration: none;">
+        KAMLI<span class="text-vert-vif" style="margin-left: 5px;">SEO ↗</span>
       </a>
-      <ul class="nav-menu">
-        <li><a href="/" class="nav-link">Accueil</a></li>
-        <li><a href="/services/" class="nav-link">Services</a></li>
-        <li><a href="/tarifs/" class="nav-link">Tarifs</a></li>
-        <li><a href="/blog/" class="nav-link">Blog</a></li>
-        <li><a href="/contact/" class="nav-link">Contact</a></li>
-        <li><a href="/contact/" class="btn btn-primary nav-cta">Devis gratuit</a></li>
-      </ul>
-      <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+      
+      <button class="hamburger" aria-label="Menu" style="border:none; background:transparent; font-size:1.5rem;">☰</button>
     </div>
   </nav>
 
-  <section class="hero">
+  <section class="hero" style="padding: 60px 0; background: linear-gradient(to bottom, #f8fcf9, #ffffff);">
     <div class="container hero-content">
-      <span class="badge">🚀 Agence SEO n°1 au Maroc</span>
-      <h1>Boostez votre <span>visibilité</span> et dominez Google</h1>
-      <p>Kamliseo vous accompagne dans votre stratégie SEO et marketing digital. Plus de trafic, plus de clients, plus de croissance — sur mesure, mesurable et durable.</p>
+      
+      <!-- Badge mis à jour -->
+      <div class="badge-seo">
+        <span>●</span> SITES WEB • RÉFÉRENCEMENT GOOGLE
+      </div>
+      
+      <!-- Titres mis à jour -->
+      <h1>Vos clients vous cherchent sur Google.<br><span class="text-vert-vif">Soyez le premier résultat qu'ils voient.</span></h1>
+      <p>KAMLISEO crée votre site web et optimise votre présence sur Google pour que vos futurs clients vous trouvent avant vos concurrents, où que vous soyez.</p>
+      
+      <!-- Boutons mis à jour (Vert foncé) -->
       <div class="hero-buttons">
-        <a href="/contact/" class="btn btn-primary btn-lg">Obtenir un devis gratuit</a>
-        <a href="/services/" class="btn btn-outline btn-lg">Découvrir nos services</a>
+        <a href="/contact/" class="btn btn-lg bg-vert-fonce" style="padding: 15px 30px; border-radius: 8px; text-decoration: none; font-weight: 600;">Demander mon analyse gratuite</a>
+        <a href="/services/" class="btn btn-lg btn-outline-custom" style="padding: 15px 30px; border-radius: 8px; text-decoration: none; font-weight: 600;">Voir nos services ↓</a>
       </div>
-      <div class="hero-stats">
-        <div class="hero-stat"><div class="num">+250</div><div class="label">Clients satisfaits</div></div>
-        <div class="hero-stat"><div class="num">+500</div><div class="label">Projets livrés</div></div>
-        <div class="hero-stat"><div class="num">98%</div><div class="label">Taux de satisfaction</div></div>
-        <div class="hero-stat"><div class="num">7 ans</div><div class="label">D'expérience</div></div>
+      
+      <!-- Ligne de réassurance -->
+      <div class="reassurance-list">
+        <span>✓ Site web + visibilité Google</span>
+        <span>✓ Sans engagement</span>
+        <span>✓ Réponse rapide</span>
       </div>
+      
     </div>
   </section>
 
-  <section class="section">
+  <!-- Section Services avec les bons émojis et couleurs pastel -->
+  <section class="section" style="padding: 60px 0;">
     <div class="container">
-      <h2 class="section-title">Nos expertises</h2>
-      <p class="section-subtitle">Une approche complète pour propulser votre présence en ligne</p>
-      <div class="grid grid-4">
-        <div class="card"><div class="card-icon">🔍</div><h3>SEO Technique</h3><p>Audit complet, optimisation on-page, Core Web Vitals et indexation parfaite.</p></div>
-        <div class="card"><div class="card-icon">✍️</div><h3>Content Marketing</h3><p>Stratégie de contenu, rédaction d'articles optimisés et link building de qualité.</p></div>
-        <div class="card"><div class="card-icon">🎨</div><h3>Création de sites</h3><p>Sites vitrines et e-commerce rapides, responsive et optimisés pour le SEO.</p></div>
-        <div class="card"><div class="card-icon">📊</div><h3>Analytics & Data</h3><p>Tableaux de bord, suivi des conversions et reporting mensuel transparent.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-gray">
-    <div class="container">
-      <h2 class="section-title">Pourquoi choisir Kamliseo ?</h2>
-      <p class="section-subtitle">Des résultats concrets, pas de promesses en l'air</p>
-      <div class="grid grid-3">
-        <div class="card"><div class="card-icon">🥇</div><h3>Stratégie sur-mesure</h3><p>Chaque business est unique. Nous adaptons nos méthodes à vos objectifs, votre marché et votre budget.</p></div>
-        <div class="card"><div class="card-icon">📈</div><h3>Résultats mesurables</h3><p>Suivi détaillé du trafic, des positions et des conversions. Vous voyez exactement où va votre investissement.</p></div>
-        <div class="card"><div class="card-icon">🤝</div><h3>Accompagnement humain</h3><p>Un expert dédié à votre projet, disponible et transparent. Pas de jargon, que des explications claires.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="cta-banner">
-        <h2>Prêt à passer au niveau supérieur ?</h2>
-        <p>Recevez un audit SEO gratuit et un plan d'action personnalisé sous 48h.</p>
-        <a href="/contact/" class="btn btn-white btn-lg">Demander mon audit gratuit</a>
-      </div>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <!-- Logo Footer -->
-          <h3><img src="/assets/img/logo.png" alt="Logo" height="30" style="margin-right:8px; vertical-align:middle;">Kamli<span>SEO</span></h3>
-          <p>Votre partenaire de confiance pour le SEO et le marketing digital. Des stratégies data-driven pour une croissance durable.</p>
+      <div class="grid grid-3" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+        
+        <div class="service-card">
+          <div class="icon-wrapper">🌐</div>
+          <h3 style="margin-bottom: 15px;">Création de sites web</h3>
+          <p style="color: #666; font-size: 0.95rem; line-height: 1.5;">Sites rapides, responsives et structurés pour le référencement dès la conception (balises, vitesse, données structurées).</p>
         </div>
-        <div class="footer-col"><h4>Navigation</h4><a href="/">Accueil</a><a href="/services/">Services</a><a href="/tarifs/">Tarifs</a><a href="/blog/">Blog</a><a href="/contact/">Contact</a></div>
-        <div class="footer-col"><h4>Services</h4><a href="/services/">SEO Technique</a><a href="/services/">Content Marketing</a><a href="/services/">Création de sites</a><a href="/services/">Analytics</a></div>
-        <div class="footer-col">
-          <h4>Contact</h4>
-          <p style="font-size: .9rem; color: var(--gray-300); margin-bottom: 8px;">📍 Casablanca, Maroc</p>
-          <a href="mailto:contact@kamliseo.com">contact@kamliseo.com</a>
-          <a href="/contact/">Devis gratuit</a>
+        
+        <div class="service-card">
+          <div class="icon-wrapper">📍</div>
+          <h3 style="margin-bottom: 15px;">Google Business Profile</h3>
+          <p style="color: #666; font-size: 0.95rem; line-height: 1.5;">Optimisation de votre fiche pour apparaître dans le pack local et sur Google Maps.</p>
         </div>
+        
+        <div class="service-card">
+          <div class="icon-wrapper">🔍</div>
+          <h3 style="margin-bottom: 15px;">Référencement naturel (SEO)</h3>
+          <p style="color: #666; font-size: 0.95rem; line-height: 1.5;">Optimisation technique, contenu ciblé et maillage pour progresser durablement dans les résultats.</p>
+        </div>
+
       </div>
-      <div class="footer-bottom">© 2026 Kamliseo. Tous droits réservés. — Conçu avec ♡ par Kamliseo</div>
+    </div>
+  </section>
+
+  <footer class="footer" style="padding: 40px 0; border-top: 1px solid #eee; margin-top: 40px;">
+    <div class="container text-center">
+      <p style="color: #888; font-size: 0.9rem;">© 2026 Kamliseo. Tous droits réservés.</p>
     </div>
   </footer>
 
-  <!-- Bouton WhatsApp Flottant (Remplacez les 0 par votre numéro) -->
+  <!-- Bouton WhatsApp Flottant (Vert vif) -->
   <a href="https://wa.me/212673492502" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Contactez-nous sur WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
   </a>
 
   <script src="/assets/js/main.js"></script>
