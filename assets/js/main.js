@@ -43,20 +43,15 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       const btn = contactForm.querySelector('button[type="submit"]');
       const original = btn.textContent;
-      
       btn.textContent = 'Envoi…';
       btn.disabled = true;
-      
       setTimeout(() => {
         btn.textContent = '✓ Message envoyé !';
-        // Utilisation de la variable CSS de votre nouveau vert vif
-        btn.style.background = 'var(--accent)'; 
+        btn.style.background = '#10B981';
         contactForm.reset();
-        
         setTimeout(() => {
           btn.textContent = original;
-          // Retour à la couleur d'origine (vert foncé)
-          btn.style.background = ''; 
+          btn.style.background = '';
           btn.disabled = false;
         }, 3000);
       }, 1200);
