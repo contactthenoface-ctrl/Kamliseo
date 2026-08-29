@@ -13,7 +13,11 @@
 <body>
   <nav class="navbar">
     <div class="container nav-wrapper">
-      <a href="/" class="nav-logo">Kamli<span>SEO</span></a>
+      <!-- Intégration du logo ici -->
+      <a href="/" class="nav-logo">
+        <img src="/assets/img/logo.png" alt="Logo Kamliseo" height="40">
+        Kamli<span>SEO</span>
+      </a>
       <ul class="nav-menu">
         <li><a href="/" class="nav-link">Accueil</a></li>
         <li><a href="/services/" class="nav-link">Services</a></li>
@@ -25,9 +29,10 @@
       <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
   </nav>
+
   <section class="hero">
     <div class="container hero-content">
-      <span class="badge">🚀 Agence SEO n°1 en France</span>
+      <span class="badge">🚀 Agence SEO n°1 au Maroc</span>
       <h1>Boostez votre <span>visibilité</span> et dominez Google</h1>
       <p>Kamliseo vous accompagne dans votre stratégie SEO et marketing digital. Plus de trafic, plus de clients, plus de croissance — sur mesure, mesurable et durable.</p>
       <div class="hero-buttons">
@@ -42,6 +47,7 @@
       </div>
     </div>
   </section>
+
   <section class="section">
     <div class="container">
       <h2 class="section-title">Nos expertises</h2>
@@ -54,6 +60,7 @@
       </div>
     </div>
   </section>
+
   <section class="section section-gray">
     <div class="container">
       <h2 class="section-title">Pourquoi choisir Kamliseo ?</h2>
@@ -65,6 +72,7 @@
       </div>
     </div>
   </section>
+
   <section class="section">
     <div class="container">
       <div class="cta-banner">
@@ -74,17 +82,33 @@
       </div>
     </div>
   </section>
+
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
-        <div class="footer-brand"><h3>Kamli<span>SEO</span></h3><p>Votre partenaire de confiance pour le SEO et le marketing digital. Des stratégies data-driven pour une croissance durable.</p></div>
+        <div class="footer-brand">
+          <!-- Logo Footer -->
+          <h3><img src="/assets/img/logo.png" alt="Logo" height="30" style="margin-right:8px; vertical-align:middle;">Kamli<span>SEO</span></h3>
+          <p>Votre partenaire de confiance pour le SEO et le marketing digital. Des stratégies data-driven pour une croissance durable.</p>
+        </div>
         <div class="footer-col"><h4>Navigation</h4><a href="/">Accueil</a><a href="/services/">Services</a><a href="/tarifs/">Tarifs</a><a href="/blog/">Blog</a><a href="/contact/">Contact</a></div>
         <div class="footer-col"><h4>Services</h4><a href="/services/">SEO Technique</a><a href="/services/">Content Marketing</a><a href="/services/">Création de sites</a><a href="/services/">Analytics</a></div>
-        <div class="footer-col"><h4>Contact</h4><a href="mailto:contact@kamliseo.com">contact@kamliseo.com</a><a href="/contact/">Devis gratuit</a><a href="/blog/">Notre blog</a></div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <p style="font-size: .9rem; color: var(--gray-300); margin-bottom: 8px;">📍 Casablanca, Maroc</p>
+          <a href="mailto:contact@kamliseo.com">contact@kamliseo.com</a>
+          <a href="/contact/">Devis gratuit</a>
+        </div>
       </div>
       <div class="footer-bottom">© 2026 Kamliseo. Tous droits réservés. — Conçu avec ❤️ par Kamliseo</div>
     </div>
   </footer>
+
+  <!-- Bouton WhatsApp Flottant (Remplacez les 0 par votre numéro) -->
+  <a href="https://wa.me/212600000000" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Contactez-nous sur WhatsApp">
+  </a>
+
   <script src="/assets/js/main.js"></script>
 </body>
 </html>
