@@ -800,3 +800,22 @@ div:has(> a[href*="devis"]) {
 .blog-post-content a[href*="devis"] {
   display: inline-block;
 }
+/* ================================================= */
+/* ===== Centrage des liens de navigation bas de page ===== */
+/* ================================================= */
+.article-content p:has(> a[href*="services"]),
+.article-content p:has(> a[href*="contact"]),
+.article-content p:has(> a[href*="tarifs"]),
+.article-content p:has(> a[href*="blog"]) {
+  text-align: center !important;
+  margin: 15px auto !important;
+}
+
+/* Transforme les liens bruts en blocs centrés et harmonieux */
+.article-content p > a[href*="services"],
+.article-content p > a[href*="contact"],
+.article-content p > a[href*="tarifs"],
+.article-content p > a[href*="blog"] {
+  display: inline-block !important;
+  text-align: center !important;
+}
