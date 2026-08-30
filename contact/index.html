@@ -88,7 +88,10 @@ content="https://kamliseo.com/assets/images/logo%20kamliseo.png"
     class="nav-logo"
     aria-label="Kamliseo - Accueil"
   >
-    Kamli<span>SEO</span>
+    <img
+      src="/assets/img/logo kamliseo.png"
+      alt="Kamliseo"
+    >
   </a>
 
 
@@ -989,7 +992,7 @@ title="Nous contacter sur WhatsApp"
 
 «»
 
-<i class="fa-brands fa-whatsapp"></i>
+><i class="fa-brands fa-whatsapp"></i>
 
   </a>  <!-- =========================================
        JAVASCRIPT
@@ -998,182 +1001,4 @@ title="Nous contacter sur WhatsApp"
     document.addEventListener("DOMContentLoaded", function () {
 
       const form =
-        document.getElementById("contact-form");
-
-      const successMessage =
-        document.getElementById("form-success");
-
-
-      if (!form) {
-        return;
-      }
-
-
-      form.addEventListener("submit", function (event) {
-
-        event.preventDefault();
-
-
-        /* ================================
-           RÉCUPÉRATION DES DONNÉES
-        ================================= */
-
-        const name =
-          document.getElementById("name").value.trim();
-
-        const email =
-          document.getElementById("email").value.trim();
-
-        const phone =
-          document.getElementById("phone").value.trim();
-
-        const company =
-          document.getElementById("company").value.trim();
-
-        const city =
-          document.getElementById("city").value.trim();
-
-        const service =
-          document.getElementById("service").value.trim();
-
-        const budget =
-          document.getElementById("budget").value.trim();
-
-        const message =
-          document.getElementById("message").value.trim();
-
-
-        /* ================================
-           VALIDATION
-        ================================= */
-
-        if (
-          !name ||
-          !email ||
-          !phone ||
-          !service ||
-          !message
-        ) {
-
-          form.reportValidity();
-
-          return;
-
-        }
-
-
-        /* ================================
-           VALIDATION EMAIL
-        ================================= */
-
-        const emailPattern =
-          /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-
-        if (!emailPattern.test(email)) {
-
-          alert(
-            "Veuillez saisir une adresse email valide."
-          );
-
-          document
-            .getElementById("email")
-            .focus();
-
-          return;
-
-        }
-
-
-        /* ================================
-           MESSAGE WHATSAPP
-        ================================= */
-
-        const whatsappMessage =
-
-          "Bonjour Kamliseo,\n\n" +
-
-          "Je souhaite obtenir un devis concernant mon projet.\n\n" +
-
-          "━━━━━━━━━━━━━━━━━━\n" +
-
-          "INFORMATIONS DU PROSPECT\n" +
-
-          "━━━━━━━━━━━━━━━━━━\n\n" +
-
-          "Nom : " +
-          name +
-          "\n" +
-
-          "Email : " +
-          email +
-          "\n" +
-
-          "Téléphone : " +
-          phone +
-          "\n" +
-
-          "Entreprise : " +
-          (company || "Non renseignée") +
-          "\n" +
-
-          "Ville : " +
-          (city || "Non renseignée") +
-          "\n\n" +
-
-          "Service souhaité : " +
-          service +
-          "\n" +
-
-          "Budget : " +
-          (budget || "Non renseigné") +
-          "\n\n" +
-
-          "Projet / Message :\n" +
-
-          message +
-          "\n\n" +
-
-          "Merci.";
-
-
-        /* ================================
-           ENCODAGE
-        ================================= */
-
-        const encodedMessage =
-          encodeURIComponent(
-            whatsappMessage
-          );
-
-
-        /* ================================
-           URL WHATSAPP
-        ================================= */
-
-        const whatsappURL =
-          "https://wa.me/212673492502?text=" +
-          encodedMessage;
-
-
-        /* ================================
-           CONFIRMATION
-        ================================= */
-
-        successMessage.style.display =
-          "block";
-
-
-        /* ================================
-           OUVERTURE WHATSAPP
-        ================================= */
-
-        window.location.href =
-          whatsappURL;
-
-      });
-
-    });
-
-  </script></body>
-</html>
+[...]
