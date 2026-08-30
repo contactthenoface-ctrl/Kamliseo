@@ -711,3 +711,18 @@ textarea.form-control { min-height: 140px; resize: vertical; }
   /* Optionnel : si votre logo a un fond sombre ou nécessite d'être bien visible sur le footer sombre */
   filter: brightness(0) invert(1); /* Rend le logo entièrement blanc si besoin, ou retirez cette ligne si votre logo est déjà adapté au fond sombre */
 }
+/* Correction du conteneur de l'offre sur mesure et de son bouton sur mobile */
+.tarifs-cta-container, .card-sur-mesure, .cta-banner {
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+
+/* S'assure que le bouton ne dépasse jamais de son bloc parent sur les petits écrans */
+.cta-banner .btn, .tarifs-cta-container .btn {
+  max-width: 100%;
+  white-space: normal; /* Permet au texte du bouton de passer à la ligne proprement si l'écran est très petit */
+  text-align: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
