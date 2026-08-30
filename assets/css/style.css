@@ -707,3 +707,53 @@ textarea.form-control { min-height: 140px; resize: vertical; }
   .hero-stats { gap: 20px; }
   .hero-stat .num { font-size: 1.8rem; }
 }
+/* ================================================= */
+/* ===== Correctifs Responsive pour les Articles ===== */
+/* ================================================= */
+
+/* 1. Empêcher tout débordement horizontal du texte et forcer le retour à la ligne */
+body, p, span, li, a, h1, h2, h3, h4, h5, h6 {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* 2. S'assurer que le conteneur principal de l'article respecte les marges mobiles */
+.article-content, .blog-post-content, .post-content, article {
+  max-width: 100% !important;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+/* 3. Ajustement dynamique des tailles de texte et titres sur mobile */
+@media (max-width: 768px) {
+  /* Réduction proportionnelle des titres dans les articles pour éviter les coupures */
+  .article-content h1, .blog-post-content h1, article h1 {
+    font-size: 1.8rem !important;
+    line-height: 1.3 !important;
+  }
+  
+  .article-content h2, .blog-post-content h2, article h2 {
+    font-size: 1.4rem !important;
+    line-height: 1.3 !important;
+    margin-top: 30px !important;
+    margin-bottom: 12px !important;
+  }
+
+  .article-content h3, .blog-post-content h3, article h3 {
+    font-size: 1.2rem !important;
+    line-height: 1.4 !important;
+  }
+
+  /* Paragraphes et listes bien lisibles sans forcer hors écran */
+  .article-content p, .blog-post-content p, article p, 
+  .article-content li, .blog-post-content li, article li {
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+  }
+
+  /* Sécurité pour les images ou blocs de code éventuels dans les articles */
+  .article-content img, .blog-post-content img, article img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+}
