@@ -266,6 +266,7 @@ img {
 
 
 /* =========================================================
+/* =========================================================
    NAVIGATION
    ========================================================= */
 
@@ -274,6 +275,8 @@ img {
   top: 0;
   left: 0;
   right: 0;
+
+  height: 72px;
 
   z-index: 1000;
 
@@ -284,7 +287,9 @@ img {
 
   border-bottom: 1px solid rgba(225, 231, 227, .85);
 
-  transition: var(--transition);
+  transition:
+    box-shadow var(--transition),
+    background var(--transition);
 }
 
 .navbar.scrolled {
@@ -298,6 +303,162 @@ img {
   justify-content: space-between;
 
   height: 72px;
+}
+
+
+/* =========================================================
+   ESPACE SOUS LE HEADER FIXE
+   ========================================================= */
+
+/*
+   Le header est en position: fixed.
+   Cette règle évite qu'il recouvre le premier contenu
+   des pages qui n'utilisent pas une classe .hero.
+*/
+
+main {
+  padding-top: 72px;
+}
+
+
+/*
+   Les sections qui ont déjà leur propre espace supérieur
+   ne doivent pas recevoir deux fois le décalage.
+*/
+
+main > .hero,
+main > .blog-header,
+main > .contact-header {
+  margin-top: -72px;
+}
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+
+  height: 38px;
+
+  flex-shrink: 0;
+}
+
+.nav-logo img {
+  display: block;
+
+  width: auto;
+  height: 38px;
+
+  max-width: 190px;
+
+  object-fit: contain;
+}
+
+.nav-logo span {
+  display: none;
+}
+
+
+/* =========================================================
+   NAV MENU
+   ========================================================= */
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-link {
+  position: relative;
+
+  color: var(--gray-700);
+
+  font-size: .96rem;
+  font-weight: 600;
+
+  transition: var(--transition);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--primary);
+}
+
+.nav-link::after {
+  content: '';
+
+  position: absolute;
+
+  left: 0;
+  bottom: -7px;
+
+  width: 0;
+  height: 2px;
+
+  background: var(--primary);
+
+  border-radius: 10px;
+
+  transition: var(--transition);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.nav-cta {
+  margin-left: 4px;
+}
+
+
+/* =========================================================
+   HAMBURGER
+   ========================================================= */
+
+.hamburger {
+  display: none;
+
+  width: 30px;
+  height: 22px;
+
+  flex-direction: column;
+  justify-content: space-between;
+
+  background: transparent;
+
+  border: none;
+
+  z-index: 1100;
+}
+
+.hamburger span {
+  display: block;
+
+  width: 100%;
+  height: 3px;
+
+  background: var(--dark);
+
+  border-radius: 4px;
+
+  transition: var(--transition);
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: translateY(9.5px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-9.5px) rotate(-45deg);
 }
 
 
