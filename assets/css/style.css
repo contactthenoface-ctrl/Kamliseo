@@ -757,3 +757,19 @@ body, p, span, li, a, h1, h2, h3, h4, h5, h6 {
     height: auto !important;
   }
 }
+/* ================================================= */
+/* ===== Correction du bouton CTA sur mobile ===== */
+/* ================================================= */
+@media (max-width: 768px) {
+  .article-cta-inline .btn, 
+  .sidebar-cta .btn,
+  .cta-banner .btn,
+  .tarifs-cta-container .btn {
+    font-size: 0.85rem !important; /* Réduit la taille du texte pour qu'il tienne dans le bouton */
+    padding: 12px 18px !important;  /* Ajuste les marges internes pour un meilleur équilibre */
+    width: 100% !important;         /* S'assure qu'il prend toute la largeur du conteneur sans dépasser */
+    white-space: normal !important; /* Permet au texte de passer sur deux lignes si nécessaire */
+    text-align: center !important;
+    line-height: 1.3 !important;
+  }
+}
