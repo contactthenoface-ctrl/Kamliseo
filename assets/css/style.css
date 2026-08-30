@@ -726,3 +726,7 @@ textarea.form-control { min-height: 140px; resize: vertical; }
   justify-content: center;
   box-sizing: border-box;
 }
+/* Masquer la pagination du blog */
+.pagination, .blog-pagination, .article-pagination {
+  display: none !important;
+}
