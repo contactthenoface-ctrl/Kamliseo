@@ -20,6 +20,13 @@
   --shadow-lg: 0 10px 30px rgba(0,0,0,.12);
   --transition: .3s ease;
 }
+/* Style du logo pour PC et Tablettes */
+.nav-logo img {
+  height: 45px; /* Taille par défaut pour les grands écrans (vous pouvez l'ajuster) */
+  width: auto;
+  object-fit: contain; /* Empêche le logo de se déformer */
+  transition: var(--transition);
+}
 
 html { scroll-behavior: smooth; }
 
@@ -504,4 +511,12 @@ textarea.form-control { min-height: 140px; resize: vertical; }
   .hero-buttons .btn { width: 100%; justify-content: center; }
   .hero-stats { gap: 20px; }
   .hero-stat .num { font-size: 1.8rem; }
+}
+@media (max-width: 768px) {
+  /* ... vos autres codes responsives ... */
+  
+  /* Ajout pour le logo mobile */
+  .nav-logo img {
+    height: 37px; /* La taille exacte que vous avez demandée pour mobile */
+  }
 }
