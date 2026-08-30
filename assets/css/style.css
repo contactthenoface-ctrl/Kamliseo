@@ -773,3 +773,30 @@ body, p, span, li, a, h1, h2, h3, h4, h5, h6 {
     line-height: 1.3 !important;
   }
 }
+/* ================================================= */
+/* ===== Centrage des liens de navigation d'articles ===== */
+/* ================================================= */
+.article-navigation, 
+.post-navigation, 
+.article-links,
+.prev-next-links,
+p:has(> a[href*="services"]),
+p:has(> a[href*="devis"]),
+div:has(> a[href*="services"]),
+div:has(> a[href*="devis"]) {
+  text-align: center !important;
+}
+
+/* Cible spécifique pour les paragraphes ou conteneurs de ces liens de bas de page */
+.article-content p:has(a), 
+.blog-post-content p:has(a) {
+  text-align: center;
+}
+
+/* S'assure que les liens eux-mêmes se comportent bien en bloc centré si nécessaire */
+.article-content a[href*="services"], 
+.article-content a[href*="devis"],
+.blog-post-content a[href*="services"], 
+.blog-post-content a[href*="devis"] {
+  display: inline-block;
+}
