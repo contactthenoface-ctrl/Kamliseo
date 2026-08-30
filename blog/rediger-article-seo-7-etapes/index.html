@@ -20,8 +20,46 @@
   <style>
     .article-hero{padding:130px 0 50px;background:linear-gradient(135deg,#F5F3FF 0%,#EDE9FE 100%);text-align:center}.article-hero .container{max-width:760px}.article-hero .blog-tag{margin-bottom:20px}.article-hero h1{font-size:2.4rem;font-weight:800;line-height:1.25;letter-spacing:-.5px;margin-bottom:20px}
     .article-hero-image{width:100%;height:380px;border-radius:16px;background-size:cover;background-position:center;background-repeat:no-repeat;margin-bottom:30px;box-shadow:var(--shadow-md)}
-    .article-meta{display:flex;justify-content:center;gap:20px;font-size:.9rem;color:var(--gray-500);flex-wrap:wrap}.article-meta span{display:flex;align-items:center;gap:6px}.article-body-wrap{display:grid;grid-template-columns:1fr 280px;gap:50px;align-items:start}.article-content{font-size:1.05rem;line-height:1.85;color:var(--gray-700)}.article-content p{margin-bottom:22px}.article-content h2{font-size:1.6rem;font-weight:800;color:var(--dark);margin:40px 0 16px}.article-content h3{font-size:1.25rem;font-weight:700;color:var(--dark);margin:28px 0 12px}.article-content ul{margin:0 0 22px 4px}.article-content ul li{padding:6px 0 6px 28px;position:relative}.article-content ul li::before{content:'\25B8';position:absolute;left:0;color:var(--primary);font-weight:800}.article-content a{color:var(--primary);font-weight:600;text-decoration:underline;text-decoration-color:rgba(108,43,217,.3);text-underline-offset:3px}.article-content a:hover{text-decoration-color:var(--primary);color:var(--primary-dark)}.article-content strong{color:var(--dark);font-weight:700}.article-quote{border-left:4px solid var(--primary);background:var(--gray-50);padding:24px 28px;border-radius:0 12px 12px 0;margin:30px 0;font-size:1.1rem;font-style:italic;color:var(--gray-700)}.article-cta-inline{background:linear-gradient(135deg,#F5F3FF,#EDE9FE);border:1.5px solid var(--primary-light);border-radius:14px;padding:28px;text-align:center;margin:36px 0}.article-cta-inline h3{font-size:1.2rem;font-weight:800;margin-bottom:8px;color:var(--dark)}.article-cta-inline p{color:var(--gray-500);font-size:.95rem;margin-bottom:18px}.article-cta-inline .btn{justify-content:center}.article-sidebar{position:sticky;top:90px}.sidebar-box{background:var(--white);border:1px solid var(--gray-200);border-radius:14px;padding:24px;margin-bottom:24px}.sidebar-box h4{font-size:1rem;font-weight:800;margin-bottom:16px;color:var(--dark)}.sidebar-toc{list-style:none}.sidebar-toc li{padding:6px 0}.sidebar-toc a{color:var(--gray-500);font-size:.88rem;font-weight:500;text-decoration:none;display:block;padding-left:12px;border-left:2px solid transparent}.sidebar-toc a:hover{color:var(--primary);border-left-color:var(--primary)}.sidebar-cta{background:linear-gradient(135deg,var(--primary),var(--primary-dark));border-radius:14px;padding:28px 22px;text-align:center;color:var(--white)}.sidebar-cta h4{color:var(--white);margin-bottom:8px}.sidebar-cta p{font-size:.85rem;opacity:.9;margin-bottom:18px}.sidebar-cta .btn{width:100%;justify-content:center}
-    @media(max-width:768px){.article-body-wrap{grid-template-columns:1fr}.article-sidebar{position:static}.article-hero h1{font-size:1.8rem}.article-content h2{font-size:1.4rem}.article-hero-image{height:220px}}
+    .article-meta{display:flex;justify-content:center;gap:20px;font-size:.9rem;color:var(--gray-500);flex-wrap:wrap}.article-meta span{display:flex;align-items:center;gap:6px}.article-body-wrap{display:grid;grid-template-columns:1fr 280px;gap:50px;align-items:start}.article-content{font-size:1.05rem;line-height:1.85;color:var(--gray-700)}.article-content p{margin-bottom:22px}.article-content h2{font-size:1.6rem;font-weight:800;color:var(--dark);margin:40px 0 16px}.article-content h3{font-size:1.25rem;font-weight:700;color:var(--dark);margin:28px 0 12px}.article-content ul{margin:0 0 22px 4px}.article-content ul li{padding:6px 0 6px 28px;position:relative}.article-content ul li::before{content:'\25B8';position:absolute;left:0;color:var(--primary);font-weight:800}.article-content a{color:var(--primary);font-weight:600;text-decoration:underline;text-decoration-color:rgba(16,185,129,.3);text-underline-offset:3px}.article-content a:hover{text-decoration-color:var(--primary);color:var(--primary-dark)}.article-content strong{color:var(--dark);font-weight:700}.article-quote{border-left:4px solid var(--primary);background:var(--gray-50);padding:24px 28px;border-radius:0 12px 12px 0;margin:30px 0;font-size:1.1rem;font-style:italic;color:var(--gray-700)}.article-cta-inline{background:linear-gradient(135deg,#F5F3FF,#EDE9FE);border:1.5px solid var(--primary-light);border-radius:14px;padding:28px;text-align:center;margin:36px 0}.article-cta-inline h3{font-size:1.2rem;font-weight:800;margin-bottom:8px;color:var(--dark)}.article-cta-inline p{color:var(--gray-500);font-size:.95rem;margin-bottom:18px}.article-cta-inline .btn{justify-content:center;width:100%}.article-sidebar{position:sticky;top:90px}.sidebar-box{background:var(--white);border:1px solid var(--gray-200);border-radius:14px;padding:24px;margin-bottom:24px}.sidebar-box h4{font-size:1rem;font-weight:800;margin-bottom:16px;color:var(--dark)}.sidebar-toc{list-style:none}.sidebar-toc li{padding:6px 0}.sidebar-toc a{color:var(--gray-500);font-size:.88rem;font-weight:500;text-decoration:none;display:block;padding-left:12px;border-left:2px solid transparent}.sidebar-toc a:hover{color:var(--primary);border-left-color:var(--primary)}.sidebar-cta{background:linear-gradient(135deg,var(--primary),var(--primary-dark));border-radius:14px;padding:28px 22px;text-align:center;color:var(--white)}.sidebar-cta h4{color:var(--white);margin-bottom:8px}.sidebar-cta p{font-size:.85rem;opacity:.9;margin-bottom:18px}.sidebar-cta .btn{width:100%;justify-content:center}
+    
+    /* Style corrigé et centré pour la navigation de fin d'article */
+    .article-nav-centered {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid var(--gray-200);
+      gap: 15px;
+      text-align: center;
+    }
+    .article-nav-centered a {
+      text-decoration: none !important;
+      display: block;
+      flex: 1;
+      padding: 12px;
+      background: var(--gray-50);
+      border-radius: 10px;
+      border: 1px solid var(--gray-200);
+      transition: var(--transition);
+    }
+    .article-nav-centered a:hover {
+      background: var(--primary-light);
+      border-color: var(--primary);
+    }
+    .article-nav-centered .nav-label {
+      font-size: 0.85rem;
+      color: var(--gray-500);
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .article-nav-centered .nav-title {
+      font-size: 0.95rem;
+      color: var(--dark);
+      font-weight: 700;
+    }
+
+    @media(max-width:768px){.article-body-wrap{grid-template-columns:1fr}.article-sidebar{position:static}.article-hero h1{font-size:1.8rem}.article-content h2{font-size:1.4rem}.article-hero-image{height:220px}.article-nav-centered{flex-direction:column}}
   </style>
 </head>
 <body>
@@ -61,8 +99,8 @@
           <h2>Étape 1 : Trouver le bon sujet et faire une recherche de mots-clés</h2>
           <p>On ne rédige jamais un article au hasard. Avant d'écrire la moindre ligne, vous devez identifier ce que votre audience cible recherche réellement sur Google. Utilisez des outils de recherche de mots-clés (Google Keyword Planner, Ubersuggest ou Semrush) pour cibler :</p>
           <ul>
-            <li>Un mot-clé principal à fort volume de recherche (ex: « création de site web »).</li>
-            <li>Des mots-clés secondaires ou de longue traîne (ex: « prix création site web Casablanca »).</li>
+            <li>Un mot-clé principal à fort volume de recherche (ex : « création de site web »).</li>
+            <li>Des mots-clés secondaires ou de longue traîne (ex : « prix création site web Casablanca »).</li>
             <li>L'intention de recherche associée (informationnelle, transactionnelle ou navigationnelle).</li>
           </ul>
           
@@ -100,14 +138,14 @@
           <p>Une fois la rédaction terminée, peaufinez les derniers détails invisibles mais cruciaux pour le référencement :</p>
           <ul>
             <li><strong>La balise Title et la Meta Description :</strong> Rédigez des balises optimisées pour inciter au clic sur Google (CTR).</li>
-            <li><strong>Le maillage interne :</strong> Faites des liens vers vos autres pages de services ou articles connexes (comme notre page <a href="/tarifs/">Tarifs</a> ou <a href="/netlinking/">Netlinking</a>).</li>
+            <li><strong>Le maillage interne :</strong> Faites des liens vers vos autres pages de services ou articles connexes (comme notre page <a href="/tarifs.html">Tarifs</a> ou <a href="/netlinking.html">Netlinking</a>).</li>
             <li><strong>Les balises ALT des images :</strong> Décrivez vos images avec des mots-clés pertinents pour vous positionner sur Google Images.</li>
           </ul>
           
           <div class="article-cta-inline">
             <h3>Besoin d'un contenu qui cartonne sur Google ?</h3>
             <p>Confiez la rédaction de vos articles et votre stratégie SEO à l'agence Kamliseo à Casablanca.</p>
-            <a href="/contact/" class="btn btn-primary btn-lg">Demander un accompagnement SEO</a>
+            <a href="/contact.html" class="btn btn-primary btn-lg">Demander un accompagnement SEO</a>
           </div>
           
           <h2>Étape 7 : Publier, promouvoir et suivre les performances</h2>
@@ -115,22 +153,22 @@
           <ul>
             <li>Indexez rapidement votre page via la <strong>Google Search Console</strong>.</li>
             <li>Partagez votre article sur vos réseaux sociaux professionnels (LinkedIn, Facebook, etc.).</li>
-            <li>Renforcez son autorité au fil du temps via des campagnes de <a href="/netlinking/">netlinking</a> de qualité.</li>
+            <li>Renforcez son autorité au fil du temps via des campagnes de <a href="/netlinking.html">netlinking</a> de qualité.</li>
             <li>Suivez l'évolution de vos positions et de votre trafic organique mois après mois.</li>
           </ul>
           
           <h2>Conclusion</h2>
           <p>Rédiger un article SEO performant demande de la méthode, de la régularité et une parfaite compréhension des attentes de votre marché local. En suivant ces 7 étapes, vous transformerez votre blog en un véritable aimant à prospects.</p>
-          <p>Chez Kamliseo, nous aidons les entreprises marocaines à booster leur visibilité grâce à des stratégies de contenu sur-mesure. Découvrez nos <a href="/services/">services</a>, consultez nos <a href="/tarifs/">tarifs transparents</a> ou <a href="/contact/">contactez-nous</a> dès aujourd'hui pour lancer votre projet.</p>
+          <p>Chez Kamliseo, nous aidons les entreprises marocaines à booster leur visibilité grâce à des stratégies de contenu sur-mesure. Découvrez nos <a href="/services.html">services</a>, consultez nos <a href="/tarifs.html">tarifs transparents</a> ou <a href="/contact.html">contactez-nous</a> dès aujourd'hui pour lancer votre projet.</p>
           
-          <div class="article-nav">
+          <div class="article-nav-centered">
             <a href="/blog/">
               <div class="nav-label">← Retour</div>
               <div class="nav-title">Tous les articles du blog</div>
             </a>
-            <a href="/contact/">
-              <div class="nav-label" style="text-align:right">Passez à l'action →</div>
-              <div class="nav-title" style="text-align:right">Contactez nos experts SEO</div>
+            <a href="/contact.html">
+              <div class="nav-label">Passez à l'action →</div>
+              <div class="nav-title">Contactez nos experts SEO</div>
             </a>
           </div>
         </article>
@@ -151,14 +189,14 @@
           <div class="sidebar-cta">
             <h4>Expertise SEO</h4>
             <p>Propulsez vos articles en tête des résultats de recherche.</p>
-            <a href="/contact/" class="btn btn-white">Contactez-nous</a>
+            <a href="/contact.html" class="btn btn-white">Contactez-nous</a>
           </div>
           <div class="sidebar-box">
             <h4>💰 Voir aussi</h4>
             <ul class="sidebar-toc">
-              <li><a href="/tarifs/">Nos tarifs de création web</a></li>
-              <li><a href="/netlinking/">Stratégie de Netlinking</a></li>
-              <li><a href="/services/">Nos services complets</a></li>
+              <li><a href="/tarifs.html">Nos tarifs de création web</a></li>
+              <li><a href="/netlinking.html">Stratégie de Netlinking</a></li>
+              <li><a href="/services.html">Nos services complets</a></li>
             </ul>
           </div>
         </aside>
@@ -176,22 +214,22 @@
         <div class="footer-col">
           <h4>Navigation</h4>
           <a href="/">Accueil</a>
-          <a href="/services/">Services</a>
-          <a href="/netlinking/">Netlinking</a>
-          <a href="/tarifs/">Tarifs</a>
+          <a href="/services.html">Services</a>
+          <a href="/netlinking.html">Netlinking</a>
+          <a href="/tarifs.html">Tarifs</a>
           <a href="/blog/">Blog</a>
-          <a href="/contact/">Contact</a>
+          <a href="/contact.html">Contact</a>
         </div>
         <div class="footer-col">
           <h4>Ressources</h4>
           <a href="/blog/">Blog SEO</a>
-          <a href="/netlinking/">Netlinking</a>
-          <a href="/services/">Référencement</a>
+          <a href="/netlinking.html">Netlinking</a>
+          <a href="/services.html">Référencement</a>
         </div>
         <div class="footer-col">
           <h4>Contact</h4>
           <a href="mailto:contact@kamliseo.com">contact@kamliseo.com</a>
-          <a href="/contact/">Devis gratuit</a>
+          <a href="/contact.html">Devis gratuit</a>
         </div>
       </div>
       <div class="footer-bottom">© 2026 Kamliseo - Guide de rédaction SEO au Maroc. Tous droits réservés.</div>
@@ -200,4 +238,3 @@
   <script src="/assets/js/main.js"></script>
 </body>
 </html>
-
