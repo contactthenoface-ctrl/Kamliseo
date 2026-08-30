@@ -698,3 +698,16 @@ textarea.form-control { min-height: 140px; resize: vertical; }
   flex-shrink: 0;
   margin-top: 2px;
 }
+/* Style du logo dans le footer */
+.footer-brand .footer-logo {
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.footer-brand .footer-logo img {
+  height: 40px; /* Ajustez la hauteur selon vos préférences (ex: 35px à 45px) */
+  width: auto;
+  object-fit: contain;
+  /* Optionnel : si votre logo a un fond sombre ou nécessite d'être bien visible sur le footer sombre */
+  filter: brightness(0) invert(1); /* Rend le logo entièrement blanc si besoin, ou retirez cette ligne si votre logo est déjà adapté au fond sombre */
+}
