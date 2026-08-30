@@ -631,3 +631,18 @@ textarea.form-control { min-height: 140px; resize: vertical; }
   .hero-stats { gap: 20px; }
   .hero-stat .num { font-size: 1.8rem; }
 }
+/* Style des icônes SVG pour la section contact */
+.contact-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.contact-info-icon-svg {
+  width: 24px;
+  height: 24px;
+  fill: var(--primary); /* Utilise la couleur principale de votre thème */
+  flex-shrink: 0;
+  margin-top: 2px; /* Ajustement optionnel pour l'alignement vertical avec le titre */
+}
