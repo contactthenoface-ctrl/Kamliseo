@@ -20,11 +20,12 @@
   --shadow-lg: 0 10px 30px rgba(0,0,0,.12);
   --transition: .3s ease;
 }
+
 /* Style du logo pour PC et Tablettes */
 .nav-logo img {
-  height: 45px; /* Taille par défaut pour les grands écrans (vous pouvez l'ajuster) */
+  height: 45px;
   width: auto;
-  object-fit: contain; /* Empêche le logo de se déformer */
+  object-fit: contain;
   transition: var(--transition);
 }
 
@@ -69,7 +70,7 @@ img { max-width: 100%; height: auto; }
 
 .badge {
   display: inline-block;
-  background: rgba(22, 163, 74, .1); /* Opacité du vert principal */
+  background: rgba(22, 163, 74, .1);
   color: var(--primary);
   padding: 6px 16px;
   border-radius: 50px;
@@ -197,7 +198,7 @@ img { max-width: 100%; height: auto; }
 .hero {
   position: relative;
   padding: 140px 0 100px;
-  background: linear-gradient(135deg, #F0FDF4 0%, #DCFCE7 50%, #F0FDF4 100%); /* Verts pastel */
+  background: linear-gradient(135deg, #F0FDF4 0%, #DCFCE7 50%, #F0FDF4 100%);
   overflow: hidden;
 }
 .hero::before {
@@ -205,7 +206,7 @@ img { max-width: 100%; height: auto; }
   position: absolute;
   top: -50%; right: -10%;
   width: 600px; height: 600px;
-  background: radial-gradient(circle, rgba(22, 163, 74, .08) 0%, transparent 70%); /* Opacité du vert */
+  background: radial-gradient(circle, rgba(22, 163, 74, .08) 0%, transparent 70%);
   border-radius: 50%;
 }
 .hero-content {
@@ -245,6 +246,20 @@ img { max-width: 100%; height: auto; }
 .hero-stat .num { font-size: 2.2rem; font-weight: 800; color: var(--primary); }
 .hero-stat .label { font-size: .9rem; color: var(--gray-500); }
 
+/* Style de l'image du Hero */
+.hero-image {
+  margin: 25px auto 30px auto;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.hero-image img {
+  max-width: 85%;
+  height: auto;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+}
+
 /* ===== Cards Grid ===== */
 .grid {
   display: grid;
@@ -279,6 +294,133 @@ img { max-width: 100%; height: auto; }
 }
 .card h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 10px; }
 .card p { color: var(--gray-500); font-size: .95rem; }
+
+/* ===== Blog Spécifique (Mis à jour avec support d'images) ===== */
+.blog-featured {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+.blog-featured-card {
+  border-radius: 18px;
+  overflow: hidden;
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+.blog-featured-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Miniature principale (Articles mis en avant) */
+.blog-featured-card .blog-thumb {
+  height: 280px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.blog-featured-card .blog-body { padding: 32px; }
+.blog-featured-card h2 { font-size: 1.6rem; font-weight: 800; margin-bottom: 12px; line-height: 1.3; }
+.blog-featured-card p { color: var(--gray-500); font-size: 1rem; margin-bottom: 16px; }
+
+.blog-featured-side {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.blog-mini-card {
+  display: flex;
+  gap: 16px;
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: 14px;
+  padding: 16px;
+  transition: var(--transition);
+  align-items: center;
+}
+.blog-mini-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateX(4px);
+}
+
+/* Miniatures latérales */
+.blog-mini-thumb {
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  flex-shrink: 0;
+}
+
+.blog-mini-card h3 { font-size: .95rem; font-weight: 700; margin-bottom: 4px; line-height: 1.4; }
+.blog-mini-card .blog-meta { font-size: .78rem; }
+
+.blog-category-bar {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+.blog-cat {
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-size: .85rem;
+  font-weight: 600;
+  background: var(--gray-100);
+  color: var(--gray-700);
+  border: 1px solid var(--gray-200);
+  transition: var(--transition);
+  cursor: pointer;
+}
+.blog-cat:hover, .blog-cat.active {
+  background: var(--primary);
+  color: var(--white);
+  border-color: var(--primary);
+}
+
+/* Grille de blog standard (articles classiques) */
+.blog-card {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: var(--transition);
+}
+.blog-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+
+.blog-card .blog-thumb {
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.blog-body { padding: 24px; }
+.blog-tag {
+  display: inline-block;
+  background: var(--gray-100);
+  color: var(--primary);
+  padding: 4px 12px;
+  border-radius: 50px;
+  font-size: .8rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.blog-card h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 8px; }
+.blog-card p { color: var(--gray-500); font-size: .9rem; margin-bottom: 16px; }
+.blog-meta { display: flex; align-items: center; gap: 12px; font-size: .85rem; color: var(--gray-500); }
+
 
 /* ===== Pricing ===== */
 .pricing-card {
@@ -328,39 +470,6 @@ img { max-width: 100%; height: auto; }
 .pricing-features li.disabled { color: var(--gray-300); }
 .pricing-features li.disabled::before { content: '✗'; color: var(--gray-300); }
 
-/* ===== Blog ===== */
-.blog-card {
-  background: var(--white);
-  border: 1px solid var(--gray-200);
-  border-radius: var(--radius);
-  overflow: hidden;
-  transition: var(--transition);
-}
-.blog-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
-.blog-thumb {
-  width: 100%;
-  height: 200px;
-  background: linear-gradient(135deg, var(--primary), var(--primary-light));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 3rem;
-  color: rgba(255,255,255,.5);
-}
-.blog-body { padding: 24px; }
-.blog-tag {
-  display: inline-block;
-  background: var(--gray-100);
-  color: var(--primary);
-  padding: 4px 12px;
-  border-radius: 50px;
-  font-size: .8rem;
-  font-weight: 600;
-  margin-bottom: 12px;
-}
-.blog-card h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 8px; }
-.blog-card p { color: var(--gray-500); font-size: .9rem; margin-bottom: 16px; }
-.blog-meta { display: flex; align-items: center; gap: 12px; font-size: .85rem; color: var(--gray-500); }
 
 /* ===== Contact Form ===== */
 .contact-wrapper {
@@ -427,7 +536,7 @@ textarea.form-control { min-height: 140px; resize: vertical; }
 
 /* ===== Page Header (inner pages) ===== */
 .page-header {
-  background: linear-gradient(135deg, #F0FDF4 0%, #DCFCE7 100%); /* Verts pastel */
+  background: linear-gradient(135deg, #F0FDF4 0%, #DCFCE7 100%);
   padding: 130px 0 60px;
   text-align: center;
 }
@@ -494,6 +603,12 @@ textarea.form-control { min-height: 140px; resize: vertical; }
   .nav-link { font-size: 1.1rem; width: 100%; padding: 6px 0; }
   .nav-link::after { display: none; }
   .nav-cta { margin-left: 0; margin-top: 10px; width: 100%; justify-content: center; }
+  
+  /* Ajustement Logo Mobile */
+  .nav-logo img {
+    height: 37px;
+  }
+
   .hero h1 { font-size: 2.2rem; }
   .hero p { font-size: 1.05rem; }
   .hero-stats { gap: 30px; }
@@ -503,6 +618,10 @@ textarea.form-control { min-height: 140px; resize: vertical; }
   .footer-grid { grid-template-columns: 1fr; gap: 30px; }
   .cta-banner { padding: 40px 24px; }
   .cta-banner h2 { font-size: 1.6rem; }
+
+  /* Adaptation Blog responsive */
+  .blog-featured { grid-template-columns: 1fr; }
+  .blog-featured-card .blog-thumb { height: 200px; }
 }
 
 @media (max-width: 480px) {
@@ -511,33 +630,4 @@ textarea.form-control { min-height: 140px; resize: vertical; }
   .hero-buttons .btn { width: 100%; justify-content: center; }
   .hero-stats { gap: 20px; }
   .hero-stat .num { font-size: 1.8rem; }
-}
-@media (max-width: 768px) {
-  /* ... vos autres codes responsives ... */
-  
-  /* Ajout pour le logo mobile */
-  .nav-logo img {
-    height: 37px; /* La taille exacte que vous avez demandée pour mobile */
-  }
-}
-/* ===== Style de l'image du Hero ===== */
-.hero-image {
-  margin: 25px auto 30px auto;
-  max-width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.hero-image img {
-  max-width: 85%; /* Ajustez ce pourcentage si vous voulez l'image plus grande ou plus petite sur PC */
-  height: auto;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-lg); /* Ajoute un effet de profondeur élégant */
-}
-
-/* Version mobile */
-@media (max-width: 768px) {
-  .hero-image img {
-    max-width: 100%; /* S'étend bien sur les petits écrans */
-  }
 }
