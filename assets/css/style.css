@@ -650,9 +650,9 @@ textarea.form-control { min-height: 140px; resize: vertical; }
 /* Styles généraux et variables (base du site)       */
 /* =================================================_ */
 :root {
-  --primary: #6c2bd9;
-  --primary-dark: #581c87;
-  --primary-light: #ede9fe;
+  --primary: #10b981;       /* Votre couleur verte principale */
+  --primary-dark: #059669;  /* Vert plus foncé pour les survols */
+  --primary-light: #d1fae5; /* Vert très clair pour les fonds légers */
   --dark: #1f2937;
   --gray-50: #f9fafb;
   --gray-100: #f3f4f6;
@@ -694,7 +694,7 @@ textarea.form-control { min-height: 140px; resize: vertical; }
 .contact-info-icon-svg {
   width: 24px;
   height: 24px;
-  fill: var(--primary); /* Utilise la couleur principale du thème */
+  fill: var(--primary); /* S'applique automatiquement en vert */
   flex-shrink: 0;
-  margin-top: 2px; /* Ajustement pour l'alignement vertical avec le texte */
+  margin-top: 2px;
 }
