@@ -81,6 +81,7 @@ img { max-width: 100%; height: auto; }
 .btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   padding: 14px 32px;
   border-radius: 50px;
@@ -113,6 +114,25 @@ img { max-width: 100%; height: auto; }
 .btn-white:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
 
 .btn-lg { padding: 16px 40px; font-size: 1.1rem; }
+
+/* Correctifs spécifiques pour les boutons dans les blocs d'articles (CTA inline & Sidebar) */
+.article-cta-inline .btn, 
+.sidebar-cta .btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #ffffff !important;
+  background-color: var(--primary) !important;
+  text-decoration: none !important;
+  font-weight: 700 !important;
+  width: 100%;
+}
+
+.article-cta-inline .btn:hover, 
+.sidebar-cta .btn:hover {
+  background-color: var(--primary-dark) !important;
+  color: #ffffff !important;
+}
 
 /* ================================================= */
 /* ===== Navigation ===== */
