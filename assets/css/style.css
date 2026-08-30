@@ -819,3 +819,19 @@ div:has(> a[href*="devis"]) {
   display: inline-block !important;
   text-align: center !important;
 }
+/* ================================================= */
+/* ===== Forcer l'alignement à gauche du Footer ===== */
+/* ================================================= */
+.footer, 
+.footer-col, 
+.footer-grid, 
+.footer-col h4, 
+.footer-col a {
+  text-align: left !important;
+}
+
+.footer-col {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+}
