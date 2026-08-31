@@ -22,6 +22,16 @@
     .article-hero-image{width:100%;height:380px;border-radius:16px;background-size:cover;background-position:center;background-repeat:no-repeat;margin-bottom:30px;box-shadow:var(--shadow-md)}
     .article-meta{display:flex;justify-content:center;gap:20px;font-size:.9rem;color:var(--gray-500);flex-wrap:wrap}.article-meta span{display:flex;align-items:center;gap:6px}.article-body-wrap{display:grid;grid-template-columns:1fr 280px;gap:50px;align-items:start}.article-content{font-size:1.05rem;line-height:1.85;color:var(--gray-700)}.article-content p{margin-bottom:22px}.article-content h2{font-size:1.6rem;font-weight:800;color:var(--dark);margin:40px 0 16px}.article-content h3{font-size:1.25rem;font-weight:700;color:var(--dark);margin:28px 0 12px}.article-content ul{margin:0 0 22px 4px}.article-content ul li{padding:6px 0 6px 28px;position:relative}.article-content ul li::before{content:'\25B8';position:absolute;left:0;color:var(--primary);font-weight:800}.article-content a{color:var(--primary);font-weight:600;text-decoration:underline;text-decoration-color:rgba(108,43,217,.3);text-underline-offset:3px}.article-content a:hover{text-decoration-color:var(--primary);color:var(--primary-dark)}.article-content strong{color:var(--dark);font-weight:700}.article-quote{border-left:4px solid var(--primary);background:var(--gray-50);padding:24px 28px;border-radius:0 12px 12px 0;margin:30px 0;font-size:1.1rem;font-style:italic;color:var(--gray-700)}.article-cta-inline{background:linear-gradient(135deg,#F5F3FF,#EDE9FE);border:1.5px solid var(--primary-light);border-radius:14px;padding:28px;text-align:center;margin:36px 0}.article-cta-inline h3{font-size:1.2rem;font-weight:800;margin-bottom:8px;color:var(--dark)}.article-cta-inline p{color:var(--gray-500);font-size:.95rem;margin-bottom:18px}.article-cta-inline .btn{justify-content:center}.article-sidebar{position:sticky;top:90px}.sidebar-box{background:var(--white);border:1px solid var(--gray-200);border-radius:14px;padding:24px;margin-bottom:24px}.sidebar-box h4{font-size:1rem;font-weight:800;margin-bottom:16px;color:var(--dark)}.sidebar-toc{list-style:none}.sidebar-toc li{padding:6px 0}.sidebar-toc a{color:var(--gray-500);font-size:.88rem;font-weight:500;text-decoration:none;display:block;padding-left:12px;border-left:2px solid transparent}.sidebar-toc a:hover{color:var(--primary);border-left-color:var(--primary)}.sidebar-cta{background:linear-gradient(135deg,var(--primary),var(--primary-dark));border-radius:14px;padding:28px 22px;text-align:center;color:var(--white)}.sidebar-cta h4{color:var(--white);margin-bottom:8px}.sidebar-cta p{font-size:.85rem;opacity:.9;margin-bottom:18px}.sidebar-cta .btn{width:100%;justify-content:center}
     @media(max-width:768px){.article-body-wrap{grid-template-columns:1fr}.article-sidebar{position:static}.article-hero h1{font-size:1.8rem}.article-content h2{font-size:1.4rem}.article-hero-image{height:220px}}
+    
+    /* Correction pour forcer l'alignement à gauche du footer */
+    .footer, .footer-col, .footer-grid, .footer-col h4, .footer-col a {
+      text-align: left !important;
+    }
+    .footer-col {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: flex-start !important;
+    }
   </style>
 </head>
 <body>
@@ -33,7 +43,7 @@
       <ul class="nav-menu">
         <li><a href="/" class="nav-link">Accueil</a></li>
         <li><a href="/services/" class="nav-link">Services</a></li>
-        <li><a href="/netlinking/" class="nav-link">Netlinking</a></li>
+        <li><a href="/netlinking-qualite-vs-quantite-2026" class="nav-link">Netlinking</a></li>
         <li><a href="/tarifs/" class="nav-link">Tarifs</a></li>
         <li><a href="/blog/" class="nav-link active">Blog</a></li>
         <li><a href="/contact/" class="nav-link">Contact</a></li>
@@ -95,7 +105,7 @@
           <p>Évitez de cibler le même mot-clé sur toutes vos pages (cannibalisation SEO). Chaque page de votre site doit avoir un rôle précis :</p>
           <ul>
             <li><strong>La page d'accueil :</strong> Cible votre activité principale et votre marque (ex: Agence web Kamliseo Maroc).</li>
-            <li><strong>Les pages de services :</strong> Ciblent les prestations spécifiques (ex: création de site e-commerce, <a href="/netlinking/">stratégie de netlinking</a>).</li>
+            <li><strong>Les pages de services :</strong> Ciblent les prestations spécifiques (ex: création de site e-commerce, <a href="/netlinking-qualite-vs-quantite-2026">stratégie de netlinking</a>).</li>
             <li><strong>Les articles de blog :</strong> Ciblent les questions informationnelles des internautes pour les attirer en haut de tunnel de conversion.</li>
           </ul>
           
@@ -153,7 +163,7 @@
           <h4>Navigation</h4>
           <a href="/">Accueil</a>
           <a href="/services/">Services</a>
-          <a href="/netlinking/">Netlinking</a>
+          <a href="/netlinking-qualite-vs-quantite-2026">Netlinking</a>
           <a href="/tarifs/">Tarifs</a>
           <a href="/blog/">Blog</a>
           <a href="/contact/">Contact</a>
@@ -161,7 +171,7 @@
         <div class="footer-col">
           <h4>Ressources</h4>
           <a href="/blog/">Blog SEO</a>
-          <a href="/netlinking/">Netlinking</a>
+          <a href="/netlinking-qualite-vs-quantite-2026">Netlinking</a>
           <a href="/services/">Référencement</a>
         </div>
         <div class="footer-col">
@@ -176,4 +186,3 @@
   <script src="/assets/js/main.js"></script>
 </body>
 </html>
-
