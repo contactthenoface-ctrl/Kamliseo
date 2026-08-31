@@ -835,3 +835,59 @@ div:has(> a[href*="devis"]) {
   flex-direction: column !important;
   align-items: flex-start !important;
 }
+/* ================================================= */
+/* ===== Style des boutons de fin d'article   ===== */
+/* ================================================= */
+.article-nav {
+  display: flex !important;
+  justify-content: space-between !important;
+  gap: 15px !important;
+  margin: 40px 0 20px 0 !important;
+  padding-top: 20px !important;
+  border-top: 1px solid var(--gray-200, #e5e7eb) !important;
+}
+
+.article-nav a {
+  flex: 1 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  padding: 18px 20px !important;
+  background: var(--gray-50, #f9fafb) !important;
+  border: 1.5px solid var(--gray-200, #e5e7eb) !important;
+  border-radius: 12px !important;
+  text-decoration: none !important;
+  transition: all 0.2s ease !important;
+}
+
+.article-nav a:hover {
+  background: #F5F3FF !important;
+  border-color: var(--primary, #6c2bd9) !important;
+}
+
+.article-nav .nav-label {
+  font-size: 0.85rem !important;
+  color: var(--primary, #6c2bd9) !important;
+  font-weight: 700 !important;
+  margin-bottom: 6px !important;
+}
+
+.article-nav .nav-title {
+  font-size: 0.95rem !important;
+  color: var(--dark, #111827) !important;
+  font-weight: 700 !important;
+  line-height: 1.3 !important;
+}
+
+/* Version mobile : empilés proprement en blocs */
+@media (max-width: 768px) {
+  .article-nav {
+    flex-direction: column !important;
+  }
+  .article-nav a {
+    text-align: left !important;
+  }
+  .article-nav a:nth-child(2) {
+    text-align: left !important;
+  }
+}
